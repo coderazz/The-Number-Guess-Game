@@ -80,7 +80,7 @@ def Medium():
             else:
                 print("sorry, you're not lucky today, try again")
         
-            print("correct guess is " + str(x))
+     print("correct guess is " + str(x))
 
 def Hard():
      x = random.randint(1,20)
