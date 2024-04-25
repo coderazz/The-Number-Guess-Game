@@ -1,109 +1,126 @@
 import random
 def Easy():
     x = random.randint(1,10)
+    
     while True:
-        numguess = input("What number of Guesses would you like to play with")
+        numguess = input("What number of Guesses would you like to play with: ")
         if not numguess.isdigit():
-                print("Input an Integer")
-                break
+            print("Input an Integer")
+            continue
         numguess = int(numguess)
+        break
+
     
     for i in range(1,numguess + 1):  #range functions for the number of iterations, with + 1 because computers counts from 0
     #for reference try: for i in range(1, 10):, print i , will counts from 1-9, so a + 1 was needed to complete the cycle!
-        guess = input("let's play the guess game (1-10), pick a lucky number (guess {} of {}) ".format(i,numguess))
-        print("remember you can make 5 lucky guess")
+            guess = input("let's play the guess game (1-10), pick a lucky number (guess {} of {}) ".format(i,numguess))
+            print("remember you can make 5 lucky guess")
 
-        if not guess.isdigit():
-            print("please enter a number")
-            continue
-        guess = int(guess)  #type casting
+            if not guess.isdigit():
+                print("please enter a number")
+                continue
+            guess = int(guess)  #type casting
     
-        if guess < 1 or guess > 10:
-            print("make a guess btw 1 and 10") 
-            continue
+            if guess < 1 or guess > 10:
+                print("make a guess btw 1 and 10") 
+                continue
 
-        if guess < x:
-            print("Your Guess is Lesser Than the correct Number, Try Again")
+            elif guess < x:
+                print("Your Guess is Lesser Than the correct Number, Try Again")
 
-        if guess > x:
-            print("Your Guess is Greater Than the correct Number, Try Again")
+            elif guess > x:
+                print("Your Guess is Greater Than the correct Number, Try Again")
 
 
-        if guess == x:
-            print("congratulations, you got it")
-            break
+            elif guess == x:
+                print("congratulations, you got it")
+                break
         
-        else:
-            print("sorry, you're not lucky today, try again")
+            else:
+                print("sorry, you're not lucky today, try again")
         
     print("correct guess is " + str(x))
 
 
 def Medium():
-    x = random.randint(1,15)
-
-    numguess = 5 #no of iterations
-    for i in range(1,numguess + 1): 
-        guess = input("let's play the guess game (1-15), pick a lucky number (guess {} of {}) ".format(i,numguess))
-        print("remember you can make 5 lucky guess")
-
-        if not guess.isdigit():
-            print("please enter a number")
-            continue
-        guess = int(guess)  #type casting
+     x = random.randint(1,15)
+     while True:
+        numguess = input("What number of Guesses would you like to play with: ")
+        if not numguess.isdigit():
+                print("Input an Integer")
+                continue
+        numguess = int(numguess)
+        break
     
-        if guess < 1 or guess > 15:
-            print("make a guess btw 1 and 15") 
-            continue
+     for i in range(1,numguess + 1):  #range functions for the number of iterations, with + 1 because computers counts from 0
+    #for reference try: for i in range(1, 10):, print i , will counts from 1-9, so a + 1 was needed to complete the cycle!
+            guess = input("let's play the guess game (1-15), pick a lucky number (guess {} of {}) ".format(i,numguess))
+            print("remember you can make 5 lucky guess")
 
-        if guess < x:
-            print("Your Guess is Lesser Than the correct Number, Try Again")
+            if not guess.isdigit():
+                print("please enter a number")
+                continue
+            guess = int(guess)  #type casting
+    
+            if guess < 1 or guess > 15:
+                print("make a guess btw 1 and 15") 
+                continue
 
-        if guess > x:
-            print("Your Guess is Greater Than the correct Number, Try Again")
+            if guess < x:
+                print("Your Guess is Lesser Than the correct Number, Try Again")
+
+            if guess > x:
+                print("Your Guess is Greater Than the correct Number, Try Again")
 
 
-        if guess == x:
-            print("congratulations, you got it")
-            break
+            if guess == x:
+                print("congratulations, you got it")
+                break
         
-        else:
-            print("sorry, you're not lucky today, try again")
+            else:
+                print("sorry, you're not lucky today, try again")
         
-    print("correct guess is " + str(x))
+            print("correct guess is " + str(x))
 
 def Hard():
-    x = random.randint(1,20)
-
-    numguess = 5 #no of iterations
-    for i in range(1,numguess + 1): 
-        guess = input("let's play the guess game (1-20), pick a lucky number (guess {} of {}) ".format(i,numguess))
-        print("remember you can make 5 lucky guess")
-
-        if not guess.isdigit():
-            print("please enter a number")
-            continue
-        guess = int(guess)  #type casting
+     x = random.randint(1,20)
+     while True:
+        numguess = input("What number of Guesses would you like to play with: ")
+        if not numguess.isdigit():
+                print("Input an Integer")
+                continue
+        numguess = int(numguess)
+        break
     
-        if guess < 1 or guess > 20:
-            print("make a guess btw 1 and 20") 
-            continue
+     for i in range(1,numguess + 1):  #range functions for the number of iterations, with + 1 because computers counts from 0
+    #for reference try: for i in range(1, 10):, print i , will counts from 1-9, so a + 1 was needed to complete the cycle!
+            guess = input("let's play the guess game (1-20), pick a lucky number (guess {} of {}) ".format(i,numguess))
+            print("remember you can make 5 lucky guess")
 
-        if guess < x:
-            print("Your Guess is Lesser Than the correct Number, Try Again")
+            if not guess.isdigit():
+                print("please enter a number")
+                continue
+            guess = int(guess)  #type casting
+    
+            if guess < 1 or guess > 20:
+                print("make a guess btw 1 and 20") 
+                continue
 
-        if guess > x:
-            print("Your Guess is Greater Than the correct Number, Try Again")
+            if guess < x:
+                print("Your Guess is Lesser Than the correct Number, Try Again")
+
+            if guess > x:
+                print("Your Guess is Greater Than the correct Number, Try Again")
 
 
-        if guess == x:
-            print("congratulations, you got it")
-            break
+            if guess == x:
+                print("congratulations, you got it")
+                break
         
-        else:
-            print("sorry, you're not lucky today, try again")
+            else:
+                print("sorry, you're not lucky today, try again")
         
-    print("correct guess is " + str(x))
+     print("correct guess is " + str(x))
 
 
 
@@ -127,12 +144,13 @@ while True:
         continue
 
     elif Level == 1:
+        print("Easy")
         Easy()
 
     elif Level == 2:
+        print("Medium")
         Medium()
 
     elif Level == 3:
+        print("Hard")
         Hard()
-
-
