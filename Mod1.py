@@ -121,10 +121,12 @@ def Hard():
                 print("sorry, you're not lucky today, try again")
         
      print("correct guess is " + str(x))
+def exit():
+     exit()
 
-
-
+play_again = "y"
 while True:
+    play_again == "y"
     print("Welcome To The Guess Game")
     print("please, Select your difficulty Level")
     print("1. Easy: 1-10")
@@ -146,11 +148,20 @@ while True:
     elif Level == 1:
         print("Easy")
         Easy()
+        play_again = input("do you still want to play again?: (y/n): ")
+        if play_again == "n":
+             exit()
 
     elif Level == 2:
         print("Medium")
         Medium()
+        play_again = input("do you still want to play again?: (y/n): ")
+        if play_again == "n":
+             exit()
 
     elif Level == 3:
         print("Hard")
         Hard()
+        play_again = input("do you still want to play again?: (y/n): ")
+        if play_again == "n":
+             exit()
